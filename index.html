@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sokkelleilighet - Geiloveien 3, Valen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Geiloveien 3</h1>
+            <p class="tagline">Elegant sokkelleilighet i Valen</p>
+        </div>
+    </header>
+
+    <!-- Image Carousel -->
+    <section class="carousel-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Utvalde bilete</h2>
+                <p>Store bilete frå leiligheta, presentert med roleg overgang.</p>
+            </div>
+
+            <div class="carousel">
+                <div id="carouselSlides" class="carousel-container"></div>
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            </div>
+
+            <div id="carouselDots" class="dots"></div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <h2>Virtuell rundgang</h2>
+            <p class="video-note">Videoane er konverterte til kompatibel MP4 for å spele betre i nettlesaren.</p>
+            <div class="video-gallery">
+                <video class="video-item" controls playsinline preload="metadata">
+                    <source src="videos/video1.mp4" type="video/mp4">
+                    Nettleseren din støttar ikkje video-elementet.
+                </video>
+                <video class="video-item" controls playsinline preload="metadata">
+                    <source src="videos/video2.mp4" type="video/mp4">
+                    Nettleseren din støttar ikkje video-elementet.
+                </video>
+                <video class="video-item" controls playsinline preload="metadata">
+                    <source src="videos/video3.mp4" type="video/mp4">
+                    Nettleseren din støttar ikkje video-elementet.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Gallery -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Heile biletgalleriet</h2>
+                <p>Alle bileta frå leiligheta er samla her for enkel gjennomgang.</p>
+            </div>
+            <div id="galleryGrid" class="gallery-grid"></div>
+        </div>
+    </section>
+
+    <!-- Property Statistics -->
+    <section class="stats-section">
+        <div class="container">
+            <h2>Eigenskapar</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📍</div>
+                    <h3>Adresse</h3>
+                    <p>Geiloveien 3, 5451 Valen</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🛏️</div>
+                    <h3>Soverom</h3>
+                    <p>2</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📐</div>
+                    <h3>Areal</h3>
+                    <p>69 m²</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🏗️</div>
+                    <h3>Byggeår</h3>
+                    <p>1977</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">✨</div>
+                    <h3>Renovert</h3>
+                    <p>2026</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🏠</div>
+                    <h3>Boligtype</h3>
+                    <p>Sokkelleilighet</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🛋️</div>
+                    <h3>Møblert</h3>
+                    <p>Ja</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📅</div>
+                    <h3>Ledig frå</h3>
+                    <p>September 2026</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2>Interessert?</h2>
+            <p class="contact-intro">Kontakt oss for meir informasjon eller for å sjå leiligheten</p>
+            
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Namn *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-post *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Telefonnummer</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Melding *</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send melding</button>
+            </form>
+
+            <div class="contact-info">
+                <p><strong>E-post:</strong> <a href="mailto:bredegronningen@hotmail.com">bredegronningen@hotmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Geiloveien 3. Alle rettar verna.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
