@@ -1,0 +1,8 @@
+/.DS_Store
+/id_ed25519
+/id_ed25519.pub
+/id_ed25519.*
+# Ignore common system files and build artifacts
+/.env
+node_modules/
+dist/
