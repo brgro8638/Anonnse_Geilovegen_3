@@ -11,7 +11,7 @@
     <header class="header">
         <div class="container">
             <h1 class="logo">Geiloveien 3</h1>
-            <p class="tagline">Elegant sokkelleilighet i Valen</p>
+            <p class="tagline">Elegant sokkelleilighet i Valen — kjem til utleige i haust</p>
         </div>
     </header>
 
@@ -20,7 +20,6 @@
         <div class="container">
             <div class="section-header">
                 <h2>Utvalde bilete</h2>
-                <p>Store bilete frå leiligheta, presentert med roleg overgang.</p>
             </div>
 
             <div class="carousel">
@@ -39,15 +38,15 @@
             <h2>Virtuell rundgang</h2>
             <p class="video-note">Videoane er konverterte til kompatibel MP4 for å spele betre i nettlesaren.</p>
             <div class="video-gallery">
-                <video class="video-item" controls playsinline preload="metadata">
+                <video class="video-item" controls playsinline preload="metadata" muted>
                     <source src="videos/video1.mp4" type="video/mp4">
                     Nettleseren din støttar ikkje video-elementet.
                 </video>
-                <video class="video-item" controls playsinline preload="metadata">
+                <video class="video-item" controls playsinline preload="metadata" muted>
                     <source src="videos/video2.mp4" type="video/mp4">
                     Nettleseren din støttar ikkje video-elementet.
                 </video>
-                <video class="video-item" controls playsinline preload="metadata">
+                <video class="video-item" controls playsinline preload="metadata" muted>
                     <source src="videos/video3.mp4" type="video/mp4">
                     Nettleseren din støttar ikkje video-elementet.
                 </video>
@@ -60,11 +59,21 @@
         <div class="container">
             <div class="section-header">
                 <h2>Heile biletgalleriet</h2>
-                <p>Alle bileta frå leiligheta er samla her for enkel gjennomgang.</p>
             </div>
             <div id="galleryGrid" class="gallery-grid"></div>
         </div>
     </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="lightbox-modal" aria-hidden="true">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Lukk">&times;</button>
+        <div class="lightbox-content">
+            <div id="lightboxSlides" class="lightbox-slides"></div>
+            <a class="lightbox-prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="lightbox-next" onclick="changeSlide(1)">&#10095;</a>
+            <div id="lightboxDots" class="dots"></div>
+        </div>
+    </div>
 
     <!-- Property Statistics -->
     <section class="stats-section">
@@ -146,7 +155,7 @@
             </form>
 
             <div class="contact-info">
-                <p><strong>E-post:</strong> <a href="mailto:bredegronningen@hotmail.com">bredegronningen@hotmail.com</a></p>
+                <p><strong>E-post:</strong> <a href="mailto:bredegronningen@hotmail.com">virtual.gadgets-1q@icloud.com</a></p>
             </div>
         </div>
     </section>
