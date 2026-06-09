@@ -83,6 +83,7 @@ function renderGallery(images) {
 
     // Attach click handlers to open lightbox
     galleryGrid.querySelectorAll('img[data-index]').forEach(img => {
+        img.style.cursor = 'pointer';
         img.addEventListener('click', (e) => {
             const idx = Number(e.currentTarget.getAttribute('data-index'));
             openLightbox(idx);
@@ -128,14 +129,32 @@ function openLightbox(startIndex) {
     // Build slides for lightbox from current apartmentImages
     slidesContainer.innerHTML = apartmentImages.map((src, idx) => `\n        <div class="lightbox-slide${idx === startIndex ? ' active' : ''}">\n            <img src="${src}" alt="Bilete ${idx + 1}">\n        </div>\n    `).join('');
 
-    dotsContainer.innerHTML = apartmentImages.map((_, idx) => `\n        <button type="button" class="dot${idx === startIndex ? ' active' : ''}" onclick="currentSlide(${idx + 1})"></button>\n    `).join('');
+    dotsContainer.innerHTML = apartmentImages.map((_, idx) => `\n        <button type="button" class="dot${idx === startIndex ? ' active' : ''}" onclick="showLightboxSlide(${idx + 1})"></button>\n    `).join('');
 
     slideIndex = startIndex + 1;
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
     // pause main carousel
     clearInterval(carouselTimer);
-    showSlide(slideIndex);
+    // show the requested lightbox slide explicitly
+    showLightboxSlide(slideIndex);
+}
+
+function showLightboxSlide(n) {
+    const slides = document.querySelectorAll('.lightbox-slide');
+    const dots = document.querySelectorAll('#lightboxDots .dot');
+    const modal = document.getElementById('lightboxModal');
+    if (!slides || slides.length === 0) return;
+
+    if (n > slides.length) slideIndex = 1;
+    else if (n < 1) slideIndex = slides.length;
+    else slideIndex = n;
+
+    slides.forEach(s => s.classList.remove('active'));
+    if (dots) dots.forEach(d => d.classList.remove('active'));
+
+    slides[slideIndex - 1].classList.add('active');
+    if (dots && dots[slideIndex - 1]) dots[slideIndex - 1].classList.add('active');
 }
 
 function closeLightbox() {
